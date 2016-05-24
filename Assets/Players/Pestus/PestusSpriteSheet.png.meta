@@ -1,0 +1,259 @@
+fileFormatVersion: 2
+guid: 983b2a28b84739144b4be09910e01fee
+timeCreated: 1463242554
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Pestus_Idle
+    21300002: Pestus_Right
+    21300004: Pestus_Left
+    21300006: Pestus_Up
+    21300008: Pestus_Down
+    21300010: Pestus_BotLeft
+    21300012: Pestus_BotRight
+    21300014: Pestus_TopRight
+    21300016: Pestus_TopLeft
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Pestus_Idle
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 248
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.5, y: 75.5}
+        - {x: -49.5, y: 67.5}
+        - {x: -75.5, y: 29.5}
+        - {x: -75.5, y: -24.5}
+        - {x: -65.5, y: -51.5}
+        - {x: -26.5, y: -75.5}
+        - {x: 23.5, y: -75.5}
+        - {x: 57.5, y: -69.5}
+        - {x: 75.5, y: -50.5}
+        - {x: 75.5, y: 40.5}
+        - {x: 51.5, y: 75.5}
+    - name: Pestus_Right
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 248
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: 75.5}
+        - {x: -14.5, y: 75.5}
+        - {x: -50.5, y: 66.5}
+        - {x: -75.5, y: 39.5}
+        - {x: -75.5, y: -34.5}
+        - {x: -41.5, y: -75.5}
+        - {x: 35.5, y: -75.5}
+        - {x: 52.5, y: -64.5}
+        - {x: 75.5, y: -24.5}
+        - {x: 75.5, y: 10.5}
+        - {x: 62.5, y: 55.5}
+    - name: Pestus_Left
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 248
+        width: 150
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75, y: 75.5}
+        - {x: -75, y: -38.5}
+        - {x: -58, y: -75.5}
+        - {x: 11, y: -75.5}
+        - {x: 50, y: -62.5}
+        - {x: 75, y: -23.5}
+        - {x: 75, y: 75.5}
+    - name: Pestus_Up
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 248
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.5, y: 75.5}
+        - {x: -67.5, y: 75.5}
+        - {x: -75.5, y: 35.5}
+        - {x: -75.5, y: -20.5}
+        - {x: -65.5, y: -52.5}
+        - {x: -24.5, y: -75.5}
+        - {x: 9.5, y: -75.5}
+        - {x: 53.5, y: -60.5}
+        - {x: 75.5, y: -13.5}
+        - {x: 75.5, y: 13.5}
+        - {x: 62.5, y: 54.5}
+    - name: Pestus_Down
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 248
+        width: 150
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75, y: 75.5}
+        - {x: -75, y: -75.5}
+        - {x: 18, y: -75.5}
+        - {x: 57, y: -65.5}
+        - {x: 75, y: -24.5}
+        - {x: 75, y: 75.5}
+    - name: Pestus_BotLeft
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 75
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75.5, y: 4.5}
+        - {x: 60.5, y: 49.5}
+        - {x: 56.5, y: 50.5}
+        - {x: 53.5, y: 49.5}
+        - {x: 21.5, y: 75.5}
+        - {x: -28.5, y: 75.5}
+        - {x: -51.5, y: 70.5}
+        - {x: -75.5, y: 16.5}
+        - {x: -75.5, y: -3.5}
+        - {x: -65.5, y: -58.5}
+        - {x: -17.5, y: -75.5}
+        - {x: 10.5, y: -75.5}
+        - {x: 51.5, y: -60.5}
+        - {x: 49.5, y: -52.5}
+        - {x: 75.5, y: -14.5}
+    - name: Pestus_BotRight
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 75
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.5, y: 75.5}
+        - {x: -9.5, y: 75.5}
+        - {x: -53.5, y: 60.5}
+        - {x: -75.5, y: 29.5}
+        - {x: -75.5, y: -24.5}
+        - {x: -49.5, y: -75.5}
+        - {x: 51.5, y: -75.5}
+        - {x: 64.5, y: -72.5}
+        - {x: 75.5, y: -28.5}
+        - {x: 75.5, y: 4.5}
+        - {x: 62.5, y: 49.5}
+    - name: Pestus_TopRight
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 71
+        width: 151
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75.5, y: -54}
+        - {x: -58.5, y: -75}
+        - {x: 45.5, y: -75}
+        - {x: 75.5, y: -49}
+        - {x: 75.5, y: 42}
+        - {x: 58.5, y: 65}
+        - {x: 46.5, y: 75}
+        - {x: -43.5, y: 75}
+        - {x: -75.5, y: 48}
+    - name: Pestus_TopLeft
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 73
+        width: 151
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61.5, y: 53}
+        - {x: 15.5, y: 75}
+        - {x: -16.5, y: 75}
+        - {x: -52.5, y: 60}
+        - {x: -56.5, y: 47}
+        - {x: -55.5, y: 43}
+        - {x: -75.5, y: 11}
+        - {x: -75.5, y: -63}
+        - {x: -32.5, y: -75}
+        - {x: 37.5, y: -75}
+        - {x: 51.5, y: -60}
+        - {x: 75.5, y: -20}
+        - {x: 75.5, y: 6}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
