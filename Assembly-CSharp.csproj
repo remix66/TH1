@@ -58,6 +58,7 @@
      <Compile Include="Assets\Players\Malario\Malario.cs" />
      <Compile Include="Assets\Players\Pestus\Pestus.cs" />
      <Compile Include="Assets\Players\Pickups.cs" />
+     <Compile Include="Assets\Players\Player.cs" />
      <Compile Include="Assets\Players\PlayersCollisionOnEnemy.cs" />
      <Compile Include="Assets\Players\PlayersMovements.cs" />
      <Compile Include="Assets\Players\PlayersSkills.cs" />
@@ -82,22 +83,22 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

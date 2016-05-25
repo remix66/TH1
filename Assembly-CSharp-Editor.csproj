@@ -79,31 +79,31 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DemiEditor">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenProEditor">
- <HintPath>D:/UnityProjects/TH1/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+ <HintPath>D:/UnityProjects/Repo/TH1/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
