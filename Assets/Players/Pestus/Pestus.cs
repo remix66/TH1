@@ -9,9 +9,11 @@ public class Pestus : MonoBehaviour
    public PlayersSkills playerSkill;
    public PlayersCollisionOnEnemy playerCollisionOnEnemy;
 
+   public int level;
     // Use this for initialization
-    void Start () {
-	
+    void Start ()
+    {
+        level = 1;
 	}
 
     void Update()
@@ -28,5 +30,10 @@ public class Pestus : MonoBehaviour
     {
 
         playerMovement.Move("HorizontalP", "VerticalP");
+    }
+
+    public void LevelUp()
+    {
+        level++;
     }
 }

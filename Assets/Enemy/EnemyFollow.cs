@@ -59,6 +59,7 @@ public class EnemyFollow : MonoBehaviour
          {
             
             enemy.isChasing = true;
+            enemy.enabled = true;
             player = other.gameObject;
             foundTarget = true;
             //enemy.StopMovement();
@@ -81,6 +82,8 @@ public class EnemyFollow : MonoBehaviour
 
     private void FollowPlayer()
     {
+        enemy.enabled = false;
+        enemy.speed = 0;
         virus.transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
     }//fin FCT Pourchasser
 

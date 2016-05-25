@@ -79,13 +79,14 @@ public class EnemySpawner : MonoBehaviour {
         {
 
             //Add all level 2 virus reduce all bit lvl 1 spawn
-            //maxRnd = 4;
+            maxRnd = 6;
         }
 
         if (gameManager.malarioLevel == 3 || gameManager.pestusLevel == 3)
         {
             //Add all level 3 virus reduce lvl 2 and lvl 1
-            // maxRnd = 4; //9
+            minRnd = 6;
+            maxRnd = 9;
         }
     }
 }

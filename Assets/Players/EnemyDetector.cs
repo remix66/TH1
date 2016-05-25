@@ -13,7 +13,6 @@ public class EnemyDetector : MonoBehaviour {
     void Start ()
     {
         player = transform.root;
-        Debug.Log(player);
         targetFound = false;
         detectionCircle.color = new Color(1f, 1f, 1f, .3f);
     }
@@ -44,6 +43,19 @@ public class EnemyDetector : MonoBehaviour {
 
         }
    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player"))
+        {
+
+            targetFound = true;
+            //enemiesClose.Add(other.gameObject);
+
+        }
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
 

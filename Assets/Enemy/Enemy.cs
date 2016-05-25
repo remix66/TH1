@@ -54,5 +54,5 @@ public class Enemy : MonoBehaviour
  
     }
 
-    public void StopMovement() { rb2d.velocity = new Vector3(0, 0, 0); }
+    public void ResetMovement() { rb2d.velocity = new Vector3(0, 0, 0); }
 }

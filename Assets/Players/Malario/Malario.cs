@@ -10,10 +10,11 @@ public class Malario : MonoBehaviour
     public PlayersSkills playerSkills;
     public PlayersCollisionOnEnemy playerCollisionOnEnemy;
 
+    public int level;
     // Use this for initialization
     void Start ()
     {
-       
+        level = 1;
 
     }
 
@@ -36,8 +37,11 @@ public class Malario : MonoBehaviour
         playerMovement.Move("HorizontalM", "VerticalM");
     }
 
-   
 
+    public void LevelUp()
+    {
+        level++;
+    }
 
 
 }

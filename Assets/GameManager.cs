@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
 
     [Header("Scripts")]
     public EnemySpawner enemySpawner;
+    public Malario malario;
+    public Pestus pestus;
 
     [Header("GameObject")]
     public GameObject[] pestusParts;
@@ -109,6 +111,7 @@ public class GameManager : MonoBehaviour {
             {
                 //Yes! Gain a level
                 malarioLevel++;
+                malario.GetComponent<Player>().level++;
 
                 //Modify the apparence of the player
                 switch (malarioLevel)
@@ -131,16 +134,20 @@ public class GameManager : MonoBehaviour {
             if (pestusScore > 0 && pestusScore % modulo == 0)
             {
                 pestusLevel++;
+                pestus.GetComponent<Player>().level++;
 
                 switch (pestusLevel)
                 {
                     case 2:
                         pestusParts[2].SetActive(true);
-                        pestusParts[1].transform.localScale = new Vector3(.5f, .5f, .5f);
+                        pestusParts[0].transform.localScale = new Vector3(.6f, .6f, .6f);
+                        pestusParts[1].transform.localScale = new Vector3(.6f, .6f, .6f);
                         break;
 
                     case 3:
                         //pestusParts[3].SetActive(true);
+                        pestusParts[0].transform.localScale = new Vector3(.8f, .8f, .8f);
+                        pestusParts[1].transform.localScale = new Vector3(.8f, .8f, .8f);
                         break;
                 }
             }
