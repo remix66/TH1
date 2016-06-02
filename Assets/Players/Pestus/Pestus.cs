@@ -19,10 +19,10 @@ public class Pestus : MonoBehaviour
     void Update()
     {
 
-        playerSkill.SpikeAttack(KeyCode.Space);
-        StartCoroutine(playerSkill.ActivateShield(KeyCode.Q));
+       // playerSkill.SpikeAttack(KeyCode.Space);
+       // StartCoroutine(playerSkill.ActivateShield(KeyCode.Q));
 
-        playerCollisionOnEnemy.ShakeToBreak(KeyCode.E);
+        //playerCollisionOnEnemy.ShakeToBreak(KeyCode.E);
         playerCollisionOnEnemy.LoosePoints();
     }
 

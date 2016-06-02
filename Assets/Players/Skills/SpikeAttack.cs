@@ -32,6 +32,7 @@ public class SpikeAttack : MonoBehaviour {
             else
             {
                 Destroy(other.gameObject);
+                //show point
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 onKillEnemy.Invoke("");
             }

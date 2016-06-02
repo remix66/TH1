@@ -93,9 +93,10 @@ public class PlayersCollisionOnEnemy : MonoBehaviour {
 
     //Shake the player to get rid of anoying ENEMY
     //SPAM button to charge power
-    public void ShakeToBreak(KeyCode keycode)
+   // public void ShakeToBreak(KeyCode keycode)
+    public void ShakeToBreak(string button)
     {
-        if (Input.GetKeyDown(keycode))
+        if (Input.GetButton(button))
         {
             if (GetComponent<DistanceJoint2D>())
             {
@@ -111,7 +112,30 @@ public class PlayersCollisionOnEnemy : MonoBehaviour {
         }
 
         if (breakPower > 0) { breakPower--; }
-        powerBar.fillAmount = breakPower / 100;
+        powerBar.fillAmount = breakPower / breakPowerMax;
+        
+    }
+
+    public void KShakeToBreak(KeyCode button)
+    {
+        if (Input.GetKeyDown(button))
+        {
+            if (GetComponent<DistanceJoint2D>())
+            {
+                transform.DOShakePosition(.5f, .1f, 10, 45);
+                breakPower += 20f;
+
+                if (breakPower >= breakPowerMax)
+                {
+                    PushEnemy();
+                    breakPower = 0;
+                }
+            }
+        }
+
+        if (breakPower > 0) { breakPower--; }
+        powerBar.fillAmount = breakPower / breakPowerMax;
+
     }
 
     //When player reach max power, PUSH ENEMY AWAY

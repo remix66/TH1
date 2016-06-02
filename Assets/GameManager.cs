@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour {
     [Header("GameObject")]
     public GameObject[] pestusParts;
     public GameObject[] malarioParts;
+    public GameObject[] points;
 
     public float time;
     public float gameTime;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour {
 
     public UnityEvent OnScoreUpdate = new UnityEvent();
     public UnityEvent OnLevelUpdate = new UnityEvent();
+    public UnityEvent OnGameFinished = new UnityEvent();
 
     // Use this for initialization
     void Start ()
@@ -44,29 +47,40 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        time = gameTime - Time.time;
-        GameFinished();
+       if(!gameFinished) time = gameTime-Time.timeSinceLevelLoad;//gameTime - Time.time;
+       GameFinished();
     }
 
     private void GameFinished()
     {
         if (time <= 0)
         {
-            
+            OnGameFinished.Invoke();
             gameFinished = true;
             //Stop spawning
             enemySpawner.enabled = false;
             //Disable players script so they dont act anymore
-            pestusParts[0].GetComponent<Pestus>().enabled = false;
+            pestusParts[0].GetComponent<Player>().enabled = false;
             pestusParts[0].GetComponent<PlayersCollisionOnEnemy>().enabled = false;
-            malarioParts[0].GetComponent<Malario>().enabled = false;
+            malarioParts[0].GetComponent<Player>().enabled = false;
             malarioParts[0].GetComponent<PlayersCollisionOnEnemy>().enabled = false;
+
         }
     }
 
     public void ResetGame()
     {
         //Do Something
+        /*time = gameTime;
+        enemySpawner.KillAllVirus();
+        malarioScore = 0;
+        malarioLevel = 1;
+
+        pestusScore = 0;
+        pestusLevel = 1;
+
+        gameFinished = false;*/
+        SceneManager.LoadScene("main");
     }
 
     public void OnUpdateScore(string player)
@@ -76,6 +90,7 @@ public class GameManager : MonoBehaviour {
         if (player == "M+")
         {
             malarioScore++;
+            
         }
         if (player == "M-")
         {
@@ -88,6 +103,7 @@ public class GameManager : MonoBehaviour {
         if (player == "P+")
         {
             pestusScore++;
+            Instantiate(points[0], pestus.transform.position + Vector3.up, transform.rotation);
         }
 
         if (player == "P-")
@@ -118,11 +134,14 @@ public class GameManager : MonoBehaviour {
                 {
                     case 2:
                         malarioParts[2].SetActive(true);
-                        malarioParts[1].transform.localScale = new Vector3(.5f,.5f,.5f);
+                        malarioParts[0].transform.localScale = new Vector3(.4f, .4f, .4f);
+                        malarioParts[1].transform.localScale = new Vector3(.4f, .4f, .4f);
                         break;
 
                     case 3:
                         //malarioParts[3].SetActive(true);
+                        malarioParts[0].transform.localScale = new Vector3(.8f, .8f, .8f);
+
                         break;
                 }
             }
@@ -140,14 +159,14 @@ public class GameManager : MonoBehaviour {
                 {
                     case 2:
                         pestusParts[2].SetActive(true);
-                        pestusParts[0].transform.localScale = new Vector3(.6f, .6f, .6f);
-                        pestusParts[1].transform.localScale = new Vector3(.6f, .6f, .6f);
+                        pestusParts[0].transform.localScale = new Vector3(.4f, .4f, .4f);
+                        pestusParts[1].transform.localScale = new Vector3(.4f, .4f, .4f);
                         break;
 
                     case 3:
                         //pestusParts[3].SetActive(true);
                         pestusParts[0].transform.localScale = new Vector3(.8f, .8f, .8f);
-                        pestusParts[1].transform.localScale = new Vector3(.8f, .8f, .8f);
+
                         break;
                 }
             }

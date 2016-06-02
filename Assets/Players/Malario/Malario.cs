@@ -22,10 +22,10 @@ public class Malario : MonoBehaviour
     {
 
         //Skills
-        playerSkills.SpikeAttack(KeyCode.KeypadEnter);
-        StartCoroutine(playerSkills.ActivateShield(KeyCode.Keypad3));
+        //playerSkills.SpikeAttack(KeyCode.KeypadEnter);
+        //StartCoroutine(playerSkills.ActivateShield(KeyCode.Keypad3));
         
-        playerCollisionOnEnemy.ShakeToBreak(KeyCode.KeypadPeriod);
+       // playerCollisionOnEnemy.ShakeToBreak(KeyCode.KeypadPeriod);
         playerCollisionOnEnemy.LoosePoints();
         
 

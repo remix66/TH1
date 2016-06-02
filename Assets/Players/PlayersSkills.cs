@@ -51,10 +51,11 @@ public class PlayersSkills : MonoBehaviour {
 
     }
     //TODO someday : Cant attack a virus stuck on your player enemy
-    public void SpikeAttack(KeyCode keyCode)
+    public void SpikeAttack(string button)
     {
 
-        if (Input.GetKeyDown(keyCode) && attackTimer >= attackRate && !isShielding)
+        //if (Input.GetKeyDown(keyCode) && attackTimer >= attackRate && !isShielding)
+        if (Input.GetButton(button) && attackTimer >= attackRate && !isShielding)
         {
             
             if (!GetComponent<DistanceJoint2D>())
@@ -62,7 +63,7 @@ public class PlayersSkills : MonoBehaviour {
                 
                 if (enemyDetector.closestEnemy != null)
                 {
-                    singleSpike.Attack();
+                    singleSpike.Attack(enemyDetector.closestEnemy);
                     attackTimer = 0;
                     enemyDetector.enemiesClose.Clear();
                     enemyDetector.closestEnemy = null;
@@ -71,6 +72,42 @@ public class PlayersSkills : MonoBehaviour {
 
         }
 
+    }
+
+    public void KSpikeAttack(KeyCode button)
+    {
+
+        if (Input.GetKeyDown(button) && attackTimer >= attackRate && !isShielding)
+        {
+            if (!GetComponent<DistanceJoint2D>())
+            {
+
+                if (enemyDetector.closestEnemy != null)
+                {
+                    singleSpike.Attack(enemyDetector.closestEnemy);
+                    attackTimer = 0;
+
+                }
+            }
+        }
+    }
+
+    //Attack on sight
+    public void SingleSpikeAttack()
+    {
+        if(attackTimer >= attackRate && !isShielding)
+        {
+            if (!GetComponent<DistanceJoint2D>())
+            {
+                if (enemyDetector.closestEnemy != null)
+                {
+                    singleSpike.Attack(enemyDetector.closestEnemy);
+                    attackTimer = 0;
+
+                }
+
+            }
+        }
     }
 
     //Triggered by eating a RedCell
@@ -82,9 +119,30 @@ public class PlayersSkills : MonoBehaviour {
         }
     }
 
-    public IEnumerator ActivateShield(KeyCode keyCode)
+    //public IEnumerator ActivateShield(KeyCode keyCode)
+    public IEnumerator ActivateShield(string button)
     {
-        if (Input.GetKeyDown(keyCode) && shieldTimer >= shieldRate)
+       // if (Input.GetKeyDown(keyCode) && shieldTimer >= shieldRate)
+        if (Input.GetButton(button) && shieldTimer >= shieldRate)
+        {
+            if (!GetComponent<DistanceJoint2D>())
+            {
+                shield.SetActive(true);
+                isShielding = true;
+                OnShieldUp.Invoke();  //Event sent to PlayersMovements
+                yield return new WaitForSeconds(3);
+                OnShieldDown.Invoke(); //Event sent to PlayersMovements
+                isShielding = false;
+                shield.SetActive(false);
+                shieldTimer = 0;
+            }
+        }
+    }
+
+    public IEnumerator KActivateShield(KeyCode button)
+    {
+        // if (Input.GetKeyDown(keyCode) && shieldTimer >= shieldRate)
+        if (Input.GetKeyDown(button) && shieldTimer >= shieldRate)
         {
             if (!GetComponent<DistanceJoint2D>())
             {

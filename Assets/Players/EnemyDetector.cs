@@ -4,8 +4,10 @@ using System.Collections.Generic;
 
 public class EnemyDetector : MonoBehaviour {
 
+    public PlayersSkills playerSkill;
     private Transform player;
     public GameObject closestEnemy;
+    public GameObject closestEnemy2;
     public bool targetFound;
     public List<GameObject> enemiesClose = new List<GameObject>();
     public SpriteRenderer detectionCircle;
@@ -51,7 +53,6 @@ public class EnemyDetector : MonoBehaviour {
         {
 
             targetFound = true;
-            //enemiesClose.Add(other.gameObject);
 
         }
     }
@@ -78,7 +79,7 @@ public class EnemyDetector : MonoBehaviour {
             if (enemiesClose[i] == null)
             {
                 enemiesClose.RemoveAt(i);
-                //continue;
+
             }
             else
             {
@@ -95,7 +96,7 @@ public class EnemyDetector : MonoBehaviour {
         } 
         
         closestEnemy = enemiesInRange[0];
-
+        
         float closestEnemyDist = Vector2.Distance(player.transform.position, closestEnemy.transform.position);
 
 
@@ -108,8 +109,14 @@ public class EnemyDetector : MonoBehaviour {
             {
                 closestEnemy = enemy;
                 //Debug.Log(closestEnemy.name);
+                
             }
+            
         }
+
+        //Trigger the attack on enemy virus
+        //playerSkill.SingleSpikeAttack(); 
+        
 
     }//End ClosestEnemy
 

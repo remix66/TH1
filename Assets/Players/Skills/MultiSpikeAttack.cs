@@ -25,6 +25,7 @@ public class MultiSpikeAttack : MonoBehaviour {
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
+            onKillEnemy.Invoke("");
         }
 
         if (other.gameObject.CompareTag("Player"))

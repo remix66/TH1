@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour {
 
     public GameManager gameManager;
     public GameObject[] enemies;
+    public Transform[] spawnPoints;
     public GameObject whiteCell;
     public GameObject redCell;
+    public List<GameObject> virus = new List<GameObject>();
     public int minRnd;
     public int maxRnd;
 
@@ -15,6 +18,7 @@ public class EnemySpawner : MonoBehaviour {
     public int spawnRedCellRdn;
 
     private float timer;
+    public bool canSpawn;
 
     
     public int malarioLvl;
@@ -29,7 +33,7 @@ public class EnemySpawner : MonoBehaviour {
         minRnd = 0;
         maxRnd = 3;
 
-        //spawnCounter = 1;
+        canSpawn =  true;
     }
 	
 	// Update is called once per frame
@@ -44,33 +48,35 @@ public class EnemySpawner : MonoBehaviour {
     {
 
         timer += Time.deltaTime;
-
-        if (timer >= spawnRate)
-        {
-            spawnRedCellRdn = Random.Range(0, 4);
-            int rndNbSpawn = Random.Range(0, 3);
-           
-            for (int i = rndNbSpawn; i > 0; i--)
+        if (canSpawn)
+        { 
+            if (timer >= spawnRate)
             {
-                int rndEnemy = Random.Range(minRnd, maxRnd);
-                GameObject enemy = Instantiate(enemies[rndEnemy]);
+                spawnRedCellRdn = Random.Range(0, 4);
+                int rndNbSpawn = Random.Range(0, 2);
+                int rndSpawnPoint = Random.Range(0, 7);
 
-                float angle = Random.value * Mathf.PI * 20;
-                enemy.transform.position = new Vector3(Mathf.Cos(angle) * (spawnDistance + Random.value * 10), 0f, Mathf.Sin(angle) * (spawnDistance + Random.value * 10));
+                for (int i = rndNbSpawn; i > 0; i--)
+                {
+                    int rndEnemy = Random.Range(minRnd, maxRnd);
+                    GameObject enemy = Instantiate(enemies[rndEnemy]);
+                    virus.Add(enemy);
+                    enemy.transform.position = spawnPoints[rndSpawnPoint].transform.position;
+                }
+
+                timer = 0;
 
             }
 
-            timer = 0;
+            if (spawnRedCellRdn == 2 && (gameManager.malarioLevel == 2 || gameManager.pestusLevel == 2))
+            {
 
+                int rndSpawnPoint = Random.Range(0, 7);
+                spawnRedCellRdn = 0;
+                GameObject rc = Instantiate(redCell);
+                rc.transform.position = spawnPoints[rndSpawnPoint].transform.position;
+            }
         }
-
-        if (spawnRedCellRdn == 2 && (gameManager.malarioLevel == 2 || gameManager.pestusLevel == 2))
-        {
-            spawnRedCellRdn = 0;
-            float angle = Random.value * Mathf.PI * 10;
-            Instantiate(redCell, new Vector3(Mathf.Cos(angle) * (spawnDistance + Random.value * 5), 0f, Mathf.Sin(angle) * (spawnDistance + Random.value * 5)), Quaternion.identity);
-        }
-
     }
 
     public void AddVirusToArray()
@@ -87,6 +93,17 @@ public class EnemySpawner : MonoBehaviour {
             //Add all level 3 virus reduce lvl 2 and lvl 1
             minRnd = 6;
             maxRnd = 9;
+        }
+    }
+
+    public void KillAllVirus()
+    {
+        foreach (GameObject v in virus)
+        {
+            if (v != null)
+            {
+                Destroy(v);
+            }  
         }
     }
 }

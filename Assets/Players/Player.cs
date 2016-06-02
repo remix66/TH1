@@ -40,17 +40,17 @@ public class Player : MonoBehaviour
     {
         if (player.name == "Pestus")
         {
-            playerMovement.Move("HorizontalP", "VerticalP");
-            playerSkill.SpikeAttack(KeyCode.Space);
-            StartCoroutine(playerSkill.ActivateShield(KeyCode.Q));
-            playerCollisionOnEnemy.ShakeToBreak(KeyCode.E);
+            playerMovement.Move("KPH", "KPV");
+            playerSkill.KSpikeAttack(KeyCode.Space);
+            StartCoroutine(playerSkill.KActivateShield(KeyCode.Q));
+            playerCollisionOnEnemy.KShakeToBreak(KeyCode.E);
         }
         else
         {
-            playerMovement.Move("HorizontalM", "VerticalM");
-            playerSkill.SpikeAttack(KeyCode.KeypadEnter);
-            StartCoroutine(playerSkill.ActivateShield(KeyCode.Keypad3));
-            playerCollisionOnEnemy.ShakeToBreak(KeyCode.KeypadPeriod);
+            playerMovement.Move("KMH", "KMV");
+            playerSkill.KSpikeAttack(KeyCode.KeypadEnter);
+            StartCoroutine(playerSkill.KActivateShield(KeyCode.Keypad3));
+            playerCollisionOnEnemy.KShakeToBreak(KeyCode.KeypadPeriod);
         }
     }
 }
